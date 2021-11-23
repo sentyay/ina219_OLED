@@ -6,6 +6,9 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/INA219.c \
+../Core/Src/OLED.c \
+../Core/Src/OLED_Fonst.c \
+../Core/Src/OLED_Icons.c \
 ../Core/Src/gpio.c \
 ../Core/Src/i2c.c \
 ../Core/Src/main.c \
@@ -17,6 +20,9 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/INA219.o \
+./Core/Src/OLED.o \
+./Core/Src/OLED_Fonst.o \
+./Core/Src/OLED_Icons.o \
 ./Core/Src/gpio.o \
 ./Core/Src/i2c.o \
 ./Core/Src/main.o \
@@ -28,6 +34,9 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/INA219.d \
+./Core/Src/OLED.d \
+./Core/Src/OLED_Fonst.d \
+./Core/Src/OLED_Icons.d \
 ./Core/Src/gpio.d \
 ./Core/Src/i2c.d \
 ./Core/Src/main.d \

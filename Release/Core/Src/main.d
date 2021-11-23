@@ -22,7 +22,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Core/Inc/i2c.h ../Core/Inc/main.h ../Core/Inc/gpio.h \
+ ../Core/Inc/OLED.h ../Core/Inc/main.h ../Core/Inc/OLED_Fonts.h \
+ ../Core/Inc/OLED_Icons.h ../Core/Inc/i2c.h ../Core/Inc/gpio.h \
  ../Core/Inc/INA219.h
 
 ../Core/Inc/main.h:
@@ -73,9 +74,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 
-../Core/Inc/i2c.h:
+../Core/Inc/OLED.h:
 
 ../Core/Inc/main.h:
+
+../Core/Inc/OLED_Fonts.h:
+
+../Core/Inc/OLED_Icons.h:
+
+../Core/Inc/i2c.h:
 
 ../Core/Inc/gpio.h:
 
