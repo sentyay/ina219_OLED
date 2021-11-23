@@ -234,23 +234,6 @@ int main(void)
 
   OLED_Init(&hi2c1);
 
-    /* Text */
-//    FontSet(Segoe_UI_Rus_12);
-//    OLED_DrawStr("Ghbdtn vbh!", 0, 15, 1);		// "Привет мир!"
-//    FontSet(Segoe_UI_Eng_10);
-//    OLED_DrawStr("by nickit94", RIGHT, 48, 1);
-//
-//    /* Icon */
-//    OLED_DrawXBM(100, 10, icon_clock);
-//
-//    /* Figures */
-//    OLED_DrawRectangle(11, 10, 88, 35);
-//    OLED_DrawCircle(10, 60, 3);
-//    OLED_DrawCircleFill(18, 60, 3);
-//    OLED_DrawCircle(26, 60, 3);
-//    OLED_DrawTriangle(40, 63, 45, 53, 50, 63);
-//    OLED_DrawTriangleFill(47, 53, 52, 63, 57, 53);
-
     /* Update screen */
     OLED_Invert(1);
     OLED_DrawBuffer(image);
@@ -275,7 +258,7 @@ int main(void)
 		  measure.current = (INA219_ReadCurrent(&ina219))*0.001;
 		  if (measure.current<0){	// Измерение тока в режиме разряда
 			  //measure.current = -(measure.current + 0.001);}
-		  	  measure.current = -(measure.current + 0.001);}
+		  	  measure.current = -(measure.current);}
 		  OLED_DrawNumf(measure.current, 8, 37, 1);
 		  OLED_UpdateScreen();
 
