@@ -259,7 +259,11 @@ int main(void)
 		  measure.current = (INA219_ReadCurrent(&ina219))*0.001;
 		  if (measure.current<0){	// Измерение тока в режиме разряда
 			  //measure.current = -(measure.current + 0.001);}
-		  	  measure.current = -(measure.current);}
+		  	  measure.current = -(measure.current+0.004);
+		  	if (measure.current<0){
+		  		measure.current += 0.001;
+		  	}
+		  }
 		  OLED_DrawNumf(measure.current, 8, 37, 1);
 		  OLED_UpdateScreen();
 
